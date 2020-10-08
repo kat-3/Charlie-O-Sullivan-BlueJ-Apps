@@ -1,0 +1,23 @@
+LabClass co452Lab = new LabClass(3);
+Student student1 = new Student("Daniel Green", "352");
+Student student2 = new Student("Adam Wood", "353");
+Student student3 = new Student("Paul Enfield", "354");
+co452Lab.enrollStudent(student1);
+co452Lab.enrollStudent(student2);
+co452Lab.enrollStudent(student3);
+co452Lab.setInstructor("Nicholas Day");
+co452Lab.setRoom("G100");
+co452Lab.setTime("Tuesday 29th September 2020");
+student1.addCredits(20);
+student2.addCredits(20);
+student3.addCredits(20);
+Course course1 = new Course();
+student1.joinCourse(course1);
+student2.joinCourse(course1);
+student3.joinCourse(course1);
+student1.print();
+Daniel Green, student ID: 352, credits: 20, Course Details: Course@6736738f
+student2.print();
+Adam Wood, student ID: 353, credits: 20, Course Details: Course@6736738f
+student3.print();
+Paul Enfield, student ID: 354, credits: 20, Course Details: Course@6736738f

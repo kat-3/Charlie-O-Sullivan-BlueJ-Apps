@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
- * 
+ *
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
  */
@@ -16,8 +16,8 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     // Details for the course the student is on
-    private Course courseInfo;
-    
+    private Course course;
+
     /**
      * Create a new student with a given name and ID number.
      */
@@ -60,7 +60,7 @@ public class Student
         credits += additionalPoints;
     }
 
-    
+
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -78,21 +78,21 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Creates a new course for the student.
      */
-    
-    public void createCourse(Course courseInfo)
+    public void joinCourse(Course course)
     {
-        this.courseInfo = courseInfo;
+        this.course = course;
+
     }
-    
+
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", Course Details: " + courseInfo);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", Course Details: " + course);
     }
 }
