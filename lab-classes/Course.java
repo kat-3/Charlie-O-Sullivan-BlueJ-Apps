@@ -19,4 +19,10 @@ public class Course
         this.courseID = courseID;
         this.courseTitle = courseTitle;
     }
+    
+    public void print()
+    {
+        System.out.println("Course details: " + courseTitle + courseID);
+    }
 }
+

@@ -1,0 +1,12 @@
+student1.createCourse(course1);
+student2.createCourse(course1);
+student3.createCourse(course1);
+student1.print();
+Charlie O'Sullivan, student ID: 2000, credits: 20
+Course details: ComputingG400
+student2.print();
+Adam Greenwood, student ID: 2001, credits: 20
+Course details: ComputingG400
+student3.print();
+John David, student ID: 2002, credits: 20
+Course details: ComputingG400
