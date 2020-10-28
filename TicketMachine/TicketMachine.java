@@ -9,7 +9,7 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by Charlie O'Sullivan
  */
 public class TicketMachine
 {
@@ -19,17 +19,87 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-
+    // Each ticket and destination, with fixed values.
+    public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);
+    public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
+    public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
+    
+    private Ticket purchasedTicket;
+    
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
         balance = 0;
         total = 0;
+        purchasedTicket = null;
     }
-
+    
+    /**
+     * 
+     */
+    public void selectAylesbury()
+    {
+        purchasedTicket = AYLESBURY_TICKET;
+    }
+    
+    /**
+     * 
+     */
+    public void selectAmersham()
+    {
+        purchasedTicket = AMERSHAM_TICKET;
+    }
+    
+    /**
+     * 
+     */
+    public void selectHighWycombe()
+    {
+        purchasedTicket = HIGHWYCOMBE_TICKET;
+    }
+    
+    public void balanceUpdate(int cash)
+    {
+        balance = balance + cash;
+        System.out.println("Cash inserted: " + cash);
+        showBalance();
+    }
+   /**
+    * Insert various amounts of coins being 10, 20, 100, 200
+    */
+    public void insert10()
+    {
+        balanceUpdate(10);
+        showBalance();
+    }
+       
+    public void insert20()
+    {
+        balanceUpdate(20);
+        showBalance();
+    }
+       
+    public void insert100()
+    {
+        balanceUpdate(100);
+        showBalance();
+    }
+       
+    public void insert200()
+    {
+        balanceUpdate(200);
+        showBalance();  
+    }
+    
+    public void  showBalance()
+    {
+        System.out.println("Total balance: " + balance);
+        
+    }
+    
     /**
      * @Return The price of a ticket.
      */
@@ -46,7 +116,8 @@ public class TicketMachine
     {
         return balance;
     }
-
+    
+    
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
