@@ -1,0 +1,24 @@
+TicketMachine ticketMa2 = new TicketMachine();
+ticketMa2.insert200();
+Cash inserted: 200
+Total balance: 200
+ticketMa2.insert10();
+Cash inserted: 10
+Total balance: 210
+ticketMa2.selectAylesbury();
+Please insert $2.20
+ticketMa2.insert10();
+Cash inserted: 10
+Total balance: 220
+ticketMa2.selectAylesbury();
+You have purchased an Aylesbury Ticket for $2.20
+ticketMa2.showBalance();
+Total balance: 0
+ticketMa2.printTicket();
+##################
+# The Aylesbury Line
+# Ticket
+# Price: 220
+# Date: 28/10/2020
+##################
+

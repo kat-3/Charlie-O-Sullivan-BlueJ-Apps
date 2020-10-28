@@ -1,0 +1,28 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insert200();
+Cash inserted: 200
+Total balance: 200
+ticketMa1.insert20();
+Cash inserted: 20
+Total balance: 220
+ticketMa1.insert20();
+Cash inserted: 20
+Total balance: 240
+ticketMa1.insert10();
+Cash inserted: 10
+Total balance: 250
+ticketMa1.selectAmersham();
+Please insert $3.00
+ticketMa1.insert20();
+Cash inserted: 20
+Total balance: 270
+ticketMa1.insert20();
+Cash inserted: 20
+Total balance: 290
+ticketMa1.insert10();
+Cash inserted: 10
+Total balance: 300
+ticketMa1.selectAmersham();
+You have purchased an Amersham Ticket for $3.00
+ticketMa1.showBalance();
+Total balance: 0

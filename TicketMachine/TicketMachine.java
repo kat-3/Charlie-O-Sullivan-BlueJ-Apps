@@ -42,7 +42,16 @@ public class TicketMachine
      */
     public void selectAylesbury()
     {
-        purchasedTicket = AYLESBURY_TICKET;
+        if(balance >= 220) 
+        {
+            purchasedTicket = AYLESBURY_TICKET;
+            balance = balance - 220;
+            System.out.println("You have purchased an Aylesbury Ticket for $2.20");
+        }
+        else
+        {
+            System.out.println("Please insert $2.20");
+        }
     }
     
     /**
@@ -50,15 +59,32 @@ public class TicketMachine
      */
     public void selectAmersham()
     {
-        purchasedTicket = AMERSHAM_TICKET;
-    }
-    
+        if(balance >= 300) 
+        {
+            purchasedTicket = AMERSHAM_TICKET;
+            balance = balance - 300;
+            System.out.println("You have purchased an Amersham Ticket for $3.00");
+        }
+        else
+        {
+            System.out.println("Please insert $3.00");
+        }
+    }   
     /**
      * 
      */
     public void selectHighWycombe()
     {
-        purchasedTicket = HIGHWYCOMBE_TICKET;
+        if(balance >= 330) 
+        {
+            purchasedTicket = HIGHWYCOMBE_TICKET;
+            balance = balance - 330;
+            System.out.println("You have purchased an High Wycombe Ticket for $3.30");
+        }
+        else
+        {
+            System.out.println("Please insert $3.30");
+        }
     }
     
     public void balanceUpdate(int cash)
@@ -73,25 +99,21 @@ public class TicketMachine
     public void insert10()
     {
         balanceUpdate(10);
-        showBalance();
     }
        
     public void insert20()
     {
         balanceUpdate(20);
-        showBalance();
     }
        
     public void insert100()
     {
         balanceUpdate(100);
-        showBalance();
     }
        
     public void insert200()
     {
-        balanceUpdate(200);
-        showBalance();  
+        balanceUpdate(200); 
     }
     
     public void  showBalance()
@@ -142,13 +164,14 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        if(balance >= price) 
+        if(purchasedTicket == AYLESBURY_TICKET) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
-            System.out.println("# The BlueJ Line");
+            System.out.println("# The Aylesbury Line");
             System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
+            System.out.println("# Price: 220");
+            System.out.println("# Date: 28/10/2020");
             System.out.println("##################");
             System.out.println();
 
@@ -157,10 +180,41 @@ public class TicketMachine
             // Reduce the balance by the price.
             balance = balance - price;
         }
+       else if(purchasedTicket == AMERSHAM_TICKET)
+       {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The Amersham Line");
+            System.out.println("# Ticket");
+            System.out.println("# Price: 300");
+            System.out.println("# Date: 28/10/2020");            
+            System.out.println("##################");
+            System.out.println();
+
+            // Update the total collected with the price.
+            total = total + price;
+            // Reduce the balance by the price.
+            balance = balance - price;
+       }
+       else if(purchasedTicket == HIGHWYCOMBE_TICKET)
+       {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The High Wycombe Line");
+            System.out.println("# Ticket");
+            System.out.println("# Price: 330");
+            System.out.println("# Date: 28/10/2020");
+            System.out.println("##################");
+            System.out.println();
+
+            // Update the total collected with the price.
+            total = total + price;
+            // Reduce the balance by the price.
+            balance = balance - price;
+       }
         else 
         {
-            System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
+            System.out.println("Please choose a destination and purchase a ticket.");
                     
         }
     }

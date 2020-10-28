@@ -1,0 +1,26 @@
+TicketMachine ticketMa3 = new TicketMachine();
+ticketMa3.insert200();
+Cash inserted: 200
+Total balance: 200
+ticketMa3.insert100();
+Cash inserted: 100
+Total balance: 300
+ticketMa3.selectHighWycombe();
+Please insert $3.30
+ticketMa3.insert20();
+Cash inserted: 20
+Total balance: 320
+ticketMa3.insert20();
+Cash inserted: 20
+Total balance: 340
+ticketMa3.insert10();
+Cash inserted: 10
+Total balance: 350
+ticketMa3.selectHighWycombe();
+You have purchased an High Wycombe Ticket for $3.30
+ticketMa3.showBalance();
+Total balance: 20
+ticketMa3.refundBalance()
+    returned int 20
+ticketMa3.refundBalance()
+    returned int 0
