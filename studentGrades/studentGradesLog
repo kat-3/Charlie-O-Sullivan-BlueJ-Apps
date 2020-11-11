@@ -1,0 +1,15 @@
+Student student1 = new Student("Charlie O'Sullivan", "22027776");
+Course course1 = new Course("G400", "Computing");
+student1.enrolCourse(course1);
+Module module1 = new Module("C0461", "3D Modelling");
+course1.addMark(63, 1);
+course1.addMark(74, 2);
+course1.addMark(69, 3);
+course1.addMark(82, 4);
+student1.print();
+Charlie O'Sullivan, student ID: 22027776, credits: 0
+Course details: Computing G400
+Module: C0452 Programming Concepts Mark = 63%
+Module: CO453 Application Programming Mark = 74%
+Module: CO456 Web Development Mark = 69%
+Module: CO457 Business Modelling Mark = 82%

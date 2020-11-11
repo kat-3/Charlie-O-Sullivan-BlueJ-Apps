@@ -1,0 +1,17 @@
+Course course1 = new Course("G400", "Computing");
+course1.convertToGrade(69)
+    returned Object B
+course1.convertToGrade(43)
+    returned Object D
+course1.convertToGrade(71)
+    returned Object A
+course1.convertToGrade(3)
+    returned Object F
+course1.convertToGrade(44)
+    returned Object D
+course1.convertToGrade(39)
+    returned Object F
+course1.convertToGrade(55)
+    returned Object C
+course1.convertToGrade(5030)
+    returned Object X
