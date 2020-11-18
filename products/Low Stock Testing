@@ -1,0 +1,10 @@
+manager.printLowStock(3)
+Printing products that are low on stock 
+
+103: Google Pixel 4A stock level: 0
+104: OnePlus 8 stock level: 2
+105: Xiaomi Mi 10 stock level: 0
+106: Google Pixel 5 stock level: 0
+107: Samsung Galaxy Note 20 stock level: 2
+
+ There were 5 products with stock less than 3

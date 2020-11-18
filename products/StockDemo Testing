@@ -1,0 +1,146 @@
+StockManager manager = new StockManager();
+StockDemo stockDem1 = new StockDemo(manager);
+stockDem1.runDemo();
+
+Kat's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 0
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: OnePlus 8 stock level: 0
+105: Xiomi Mi 10 stock level: 0
+106: Google Pixel 5 stock level: 0
+107: Samsung Galaxy Note 20 stock level: 0
+108: Xiaomi Redmi Note 9 stock level: 0
+109: OnePlus 7T Pro stock level: 0
+110: Oppo Find X2 stock level: 0
+
+Product stock increased by 6
+101: Samsung Galaxy S20 stock level: 6
+
+Product stock increased by 9
+102: Apple iPhone 12 stock level: 9
+
+Product stock increased by 2
+103: Google Pixel 4A stock level: 2
+
+Product stock increased by 7
+104: OnePlus 8 stock level: 7
+
+Product stock increased by 1
+105: Xiomi Mi 10 stock level: 1
+
+Product stock increased by 4
+106: Google Pixel 5 stock level: 4
+
+Product stock increased by 6
+107: Samsung Galaxy Note 20 stock level: 6
+
+Product stock increased by 6
+108: Xiaomi Redmi Note 9 stock level: 6
+
+Product stock increased by 9
+109: OnePlus 7T Pro stock level: 9
+
+Product stock increased by 8
+110: Oppo Find X2 stock level: 8
+
+
+Kat's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 6
+102: Apple iPhone 12 stock level: 9
+103: Google Pixel 4A stock level: 2
+104: OnePlus 8 stock level: 7
+105: Xiomi Mi 10 stock level: 1
+106: Google Pixel 5 stock level: 4
+107: Samsung Galaxy Note 20 stock level: 6
+108: Xiaomi Redmi Note 9 stock level: 6
+109: OnePlus 7T Pro stock level: 9
+110: Oppo Find X2 stock level: 8
+
+Selling Product: Order Quantity = 1
+101: Samsung Galaxy S20 stock level: 6
+  1 items sold!
+
+Selling Product: Order Quantity = 5
+102: Apple iPhone 12 stock level: 9
+  5 items sold!
+
+Selling Product: Order Quantity = 5
+103: Google Pixel 4A stock level: 2
+  2 items sold!
+
+Selling Product: Order Quantity = 5
+104: OnePlus 8 stock level: 7
+  5 items sold!
+
+Selling Product: Order Quantity = 3
+105: Xiomi Mi 10 stock level: 1
+  1 items sold!
+
+Selling Product: Order Quantity = 5
+106: Google Pixel 5 stock level: 4
+  4 items sold!
+
+Selling Product: Order Quantity = 4
+107: Samsung Galaxy Note 20 stock level: 6
+  4 items sold!
+
+Selling Product: Order Quantity = 2
+108: Xiaomi Redmi Note 9 stock level: 6
+  2 items sold!
+
+Selling Product: Order Quantity = 2
+109: OnePlus 7T Pro stock level: 9
+  2 items sold!
+
+Selling Product: Order Quantity = 3
+110: Oppo Find X2 stock level: 8
+  3 items sold!
+
+
+Kat's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 5
+102: Apple iPhone 12 stock level: 4
+103: Google Pixel 4A stock level: 0
+104: OnePlus 8 stock level: 2
+105: Xiomi Mi 10 stock level: 0
+106: Google Pixel 5 stock level: 0
+107: Samsung Galaxy Note 20 stock level: 2
+108: Xiaomi Redmi Note 9 stock level: 4
+109: OnePlus 7T Pro stock level: 7
+110: Oppo Find X2 stock level: 5
+
+Product with ID 101 Has been removed from the system.
+105: Xiomi Mi 10 stock level: 0
+Product has been renamed.
+105: Xiaomi Mi 10 stock level: 0
+Looking for products containing: Google
+103: Google Pixel 4A stock level: 0
+106: Google Pixel 5 stock level: 0
+
+Kat's Stock List
+====================
+
+102: Apple iPhone 12 stock level: 4
+103: Google Pixel 4A stock level: 0
+104: OnePlus 8 stock level: 2
+105: Xiaomi Mi 10 stock level: 0
+106: Google Pixel 5 stock level: 0
+107: Samsung Galaxy Note 20 stock level: 2
+108: Xiaomi Redmi Note 9 stock level: 4
+109: OnePlus 7T Pro stock level: 7
+110: Oppo Find X2 stock level: 5
+
+manager.sellProduct(103, 13);
+Selling Product: Order Quantity = 13
+103: Google Pixel 4A stock level: 0
+  0 items sold!
+
+manager.findProduct(113)
+    returned Object null

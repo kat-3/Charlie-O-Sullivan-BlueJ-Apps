@@ -3,6 +3,7 @@
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
+ * Modifed by Charlie O'Sullivan
  */
 public class Product
 {
@@ -42,6 +43,11 @@ public class Product
         return name;
     }
 
+    public void setName(String updatedName)
+    {
+        name = updatedName;
+    }
+    
     /**
      * @return The quantity in stock.
      */
