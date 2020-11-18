@@ -12,6 +12,7 @@ public class Course
     private int finalMark;
     private Grades finalGrade;   
 
+    // The 4 modules of the course.
     private Module module1;
     private Module module2;
     private Module module3;
@@ -33,7 +34,8 @@ public class Course
     }
 
     /**
-     * 
+     *  Adds a mark to the specific module
+     *  Which is stated when the method is called.
      */
     public void addMark(int mark, int moduleNo)
     {
@@ -55,9 +57,14 @@ public class Course
         else
         {
             module4.awardMark(mark);
-       }           
+        }           
     }
 
+    /**
+     * Returns a value from the enumeration Grades Class
+     * Based on the inputted mark, stating 
+     * their final grade.
+     */
     public Grades convertToGrade(int mark)
     {
         if((mark >= 0) && (mark < 40))
@@ -87,6 +94,10 @@ public class Course
         }
     }
 
+    /**
+     * Prints out the individual modules and the 
+     * details of the course.
+     */
     public void print()
     {
         System.out.println("Course details: " + courseTitle + " " + courseID);

@@ -12,7 +12,7 @@ public class Module
     private int mark;
     private boolean completed;
     /**
-     * Module Constructor
+     * Constructor for the module class.
      */
     public Module(String title, String moduleNo)
     {
@@ -21,7 +21,12 @@ public class Module
         this.moduleNo = moduleNo;
         completed = false;
     }
-    
+
+    /**
+     * Awards a mark to the value
+     * Not allowing marks below 0 
+     * and above 100.
+     */
     public void awardMark(int mark)
     {
         if ((mark >= 0) && (mark <= 100))
@@ -34,13 +39,17 @@ public class Module
             System.out.println("Please insert a valid mark.");
         }
     }
-    
+
     public boolean isComplete()
     {
         return this.completed;
     }
-    
-    
+
+    /**
+     * Prints out the module's information which 
+     * includes the title, module number and
+     * the mark of the module.
+     */
     public void print()
     {
         System.out.println("Module: " + moduleNo + " " + title + " Mark = " + mark + "%");

@@ -23,10 +23,9 @@ public class TicketMachine
     public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);
     public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
     public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
-    
+
     private Ticket purchasedTicket;
-    
-    
+
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -36,9 +35,11 @@ public class TicketMachine
         total = 0;
         purchasedTicket = null;
     }
-    
+
     /**
-     * 
+     * Method for selecting setting the purchased
+     * Ticket to Aylesbury, as well as subtracting
+     * balance as long as there is enough money.
      */
     public void selectAylesbury()
     {
@@ -53,9 +54,11 @@ public class TicketMachine
             System.out.println("Please insert $2.20");
         }
     }
-    
+
     /**
-     * 
+     * Method for selecting setting the purchased
+     * Ticket to Amersham, as well as subtracting
+     * balance as long as there is enough money.
      */
     public void selectAmersham()
     {
@@ -70,8 +73,11 @@ public class TicketMachine
             System.out.println("Please insert $3.00");
         }
     }   
+
     /**
-     * 
+     * Method for selecting setting the purchased
+     * Ticket to High Wycombe, as well as subtracting
+     * balance as long as there is enough money.
      */
     public void selectHighWycombe()
     {
@@ -86,42 +92,47 @@ public class TicketMachine
             System.out.println("Please insert $3.30");
         }
     }
-    
+
+    /**
+     * Method for updating the amount of balance, based
+     * on inserted cash.
+     */
     public void balanceUpdate(int cash)
     {
         balance = balance + cash;
         System.out.println("Cash inserted: " + cash);
         showBalance();
     }
-   /**
-    * Insert various amounts of coins being 10, 20, 100, 200
-    */
+
+    /**
+     * Insert various amounts of coins being 10, 20, 100, 200
+     */
     public void insert10()
     {
         balanceUpdate(10);
     }
-       
+
     public void insert20()
     {
         balanceUpdate(20);
     }
-       
+
     public void insert100()
     {
         balanceUpdate(100);
     }
-       
+
     public void insert200()
     {
         balanceUpdate(200); 
     }
-    
+
     public void  showBalance()
     {
         System.out.println("Total balance: " + balance);
-        
+
     }
-    
+
     /**
      * @Return The price of a ticket.
      */
@@ -138,8 +149,7 @@ public class TicketMachine
     {
         return balance;
     }
-    
-    
+
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
@@ -153,7 +163,7 @@ public class TicketMachine
         else 
         {
             System.out.println("Use a positive amount rather than: " +
-                               amount);
+                amount);
         }
     }
 
@@ -180,8 +190,8 @@ public class TicketMachine
             // Reduce the balance by the price.
             balance = balance - price;
         }
-       else if(purchasedTicket == AMERSHAM_TICKET)
-       {
+        else if(purchasedTicket == AMERSHAM_TICKET)
+        {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The Amersham Line");
@@ -195,9 +205,9 @@ public class TicketMachine
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
-       }
-       else if(purchasedTicket == HIGHWYCOMBE_TICKET)
-       {
+        }
+        else if(purchasedTicket == HIGHWYCOMBE_TICKET)
+        {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The High Wycombe Line");
@@ -211,11 +221,11 @@ public class TicketMachine
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
-       }
+        }
         else 
         {
             System.out.println("Please choose a destination and purchase a ticket.");
-                    
+
         }
     }
 

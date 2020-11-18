@@ -1,9 +1,10 @@
 import java.util.Date;
 /**
- * Write a description of class Ticket here.
+ * A Class for creating a ticket, with a destination,
+ * price and date on the ticket.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Charlie O'Sullivan
+ * @version 1.0
  */
 public class Ticket
 {
@@ -24,7 +25,7 @@ public class Ticket
     }
     
     /**
-     * 
+     * Returns the ticket's price.
      */
     public int findTicketPrice()
     {
@@ -32,7 +33,7 @@ public class Ticket
     }
     
     /**
-     * 
+     * Returns the ticket's destination.
      */
     public String findTicketDestination()
     {
@@ -40,7 +41,7 @@ public class Ticket
     }
     
     /**
-     * 
+     * Returns the ticket's date.
      */
     public Date findTicketDate()
     {

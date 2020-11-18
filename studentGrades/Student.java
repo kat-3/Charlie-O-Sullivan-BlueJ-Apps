@@ -6,6 +6,7 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
+ * Modified by Charlie O'Sullivan
  */
 public class Student
 {
@@ -17,8 +18,9 @@ public class Student
     private int credits;
     // Details for the course the student is on
     private Course courseInfo;
+    // The final grade of the student.
     private Grades finalGrade;  
-    
+
     /**
      * Create a new student with a given name and ID number.
      */
@@ -61,7 +63,6 @@ public class Student
         credits += additionalPoints;
     }
 
-    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -79,16 +80,16 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Creates a new course for the student.
      */
-    
+
     public void enrolCourse(Course courseInfo)
     {
         this.courseInfo = courseInfo;
     }
-    
+
     /**
      * Print the student's name and ID number to the output terminal.
      */
