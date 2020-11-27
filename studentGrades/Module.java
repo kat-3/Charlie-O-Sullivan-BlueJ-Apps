@@ -21,7 +21,12 @@ public class Module
         this.moduleNo = moduleNo;
         completed = false;
     }
-
+    
+    public int getMark()
+    {
+        return mark;
+    }
+    
     /**
      * Awards a mark to the value
      * Not allowing marks below 0 
@@ -52,6 +57,16 @@ public class Module
      */
     public void print()
     {
-        System.out.println("Module: " + moduleNo + " " + title + " Mark = " + mark + "%");
+        System.out.println("Module: " + moduleNo + " " + title);
+        
+        if(isComplete())
+        {
+            System.out.println(" mark = " + mark + "%");
+        }
+        
+        else
+        {
+            System.out.println(" This module is not yet completed.");
+        }
     }
 }

@@ -10,7 +10,9 @@ public class Course
     private String courseID;
     private String courseTitle;
     private int finalMark;
-    private Grades finalGrade;   
+    private int finalCredits;
+    private Grades finalGrade;
+    private boolean completed;
 
     // The 4 modules of the course.
     private Module module1;
@@ -31,6 +33,10 @@ public class Course
         module2 = new Module("Application Programming", "CO453");
         module3 = new Module("Web Development", "CO456");
         module4 = new Module("Business Modelling", "CO457");
+        
+        finalCredits = 0;
+        completed = false;
+        
     }
 
     /**
@@ -60,6 +66,15 @@ public class Course
         }           
     }
 
+    private void addMark(Module module)
+    {
+        if(module.isComplete())
+        {
+            finalMark = finalMark + module.getMark();
+            
+        }
+    }
+    
     /**
      * Returns a value from the enumeration Grades Class
      * Based on the inputted mark, stating 
