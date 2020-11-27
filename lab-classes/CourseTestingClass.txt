@@ -1,3 +1,6 @@
+Course course1 = new Course("G400", "Computing");
+course1.print();
+Course details: ComputingG400
 student1.createCourse(course1);
 student2.createCourse(course1);
 student3.createCourse(course1);
