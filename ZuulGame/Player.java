@@ -1,7 +1,14 @@
-import java.util.ArrayList
+import java.util.ArrayList;
 
 /**
+ * This class stores information about the player
+ * including the player's current state in terms
+ * of energy, score and the number of turns so far.
+ * The player can carry a number of items up to 
+ * the maximum weight.
  *
+ * @author Charlie O'Sullivan
+ * @version 1.0
  */
 public class Player
 {
@@ -10,22 +17,28 @@ public class Player
 
     public static final int MAX_PROVISION = 100;
     public static final int MIN_PROVISION = 10;
-    public static final int PROVISION_LOSS = 6;
-
+    public static final int PROVISION_LOSS = 3;
+    
     public static final int MOVE_ENERGY = 4;
-
+    
     private String name;
+
     private int score;
+
     private int moves;
+
     private int energy;
+
     private int water;
+    
     private int food;
+    
     private boolean alive;
 
     private ArrayList<ItemTypes> items;
 
     /**
-     * Constructer for the Player class
+     * Constructor for objects of class Player
      */
     public Player(String name)
     {
@@ -34,6 +47,7 @@ public class Player
 
         score = 0;
         moves = 0;
+        
         food = MAX_PROVISION;
         water = MAX_PROVISION;
         energy = MAX_ENERGY;
@@ -41,58 +55,37 @@ public class Player
         alive = true;
     }
 
-    /**
-     *
-     */
     public String getName()
     {
         return this.name;
-    }
+    }//end method getName
 
-    /**
-     *
-     */
     public void setName(String name)
     {
         this.name = name;
-    }
+    }//end method setName
 
-    /**
-     *
-     */
-    public void getScore()
+    public int getScore()
     {
         return this.score;
-    }
+    }//end method getScore
 
-    /**
-     *
-     */
     public void increaseScore(int amount)
     {
         score = score + amount;
-    }
+    }//end method setScore
 
-    /**
-     *
-     */
     public void decreaseScore(int amount)
     {
         score = score - amount;
         if(score < 0)score = 0;
-    }
+    }//end method setScore
 
-    /**
-     *
-     */
     public int getMoves()
     {
         return this.moves;
     }
 
-    /**
-     *
-     */
     public void increaseMoves()
     {
         this.moves++;
@@ -100,14 +93,11 @@ public class Player
 
         useProvisions(ItemTypes.WATER, water);
         useProvisions(ItemTypes.FOOD, food);
-
+        
         if(energy < MIN_ENERGY)
             alive = false;
     }
 
-    /**
-     *
-     */
     private void useProvisions(ItemTypes item, int provision)
     {
         if(isCarrying(item))
@@ -119,31 +109,23 @@ public class Player
         {
             water -= PROVISION_LOSS;
         }
-
+        
         if(provision < MIN_PROVISION)
             alive = false;
+        
     }
-
-    /**
-     *
-     */
+    
     public int getEnergy()
     {
         return this.energy;
     }
 
-    /**
-     *
-     */
     public void increaseEnergy(int increase)
     {
         this.energy += increase;
         if(energy > MAX_ENERGY)energy = MAX_ENERGY;
     }
 
-    /**
-     *
-     */
     public void decreaseEnergy(int decrease)
     {
         this.energy -= decrease;
@@ -151,53 +133,35 @@ public class Player
             alive = false;
     }
 
-    /**
-     *
-     */
     public boolean isAlive()
     {
         return this.alive;
     }
 
-    /**
-     *
-     */
     public void setAlive()
     {
         this.alive = true;
     }
 
-    /**
-     *
-     */
     public ArrayList<ItemTypes> getItems()
     {
         return this.items;
     }
 
-    /**
-     *
-     */
     public void addItem(ItemTypes item)
     {
         if(!isCarrying(item))
             this.items.add(item);
     }
 
-    /**
-     *
-     */
     public void removeItem(ItemTypes item)
     {
         this.items.remove(item);
-    }
+    }    
 
-    /**
-     *
-     */
     public String toString()
     {
-        String
+        String 
         output = "\n ----------------------------------------------" +
             "\n | " + name + ": | Move " + moves + " | Energy = " + energy +
             " | Score = " + score + " |" +
@@ -207,7 +171,35 @@ public class Player
         return output;
     }
 
-    /**
-     *
-     */
+    public boolean isCarrying(ItemTypes item)
+    {
+        return items.contains(item);
+    }
+    
+    public String showItems()
+    {
+        String inventory = "\n You are carrying: ";
+        int count = 0;
+        
+        if(items.size() == 0)
+            inventory += "nothing!";
+        else
+        {
+            for(ItemTypes item : items)
+            {
+                count++;
+                inventory += item;
+
+                if(count < items.size())
+                {
+                    inventory += ", ";
+                }
+                else
+                {
+                    inventory += "\n";
+                }
+            }
+        }
+        return inventory;
+    }
 }

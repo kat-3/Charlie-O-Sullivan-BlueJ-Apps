@@ -14,53 +14,35 @@
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  * 
- * Modified and extended by Student Name
+ * Modified and extended by Charlie O'Sullivan
  */
 
 public class Game 
 {
+    public static final int TAKE_SCORE = 100;
+    public static final int COMMAND_ENERGY = 2;
+    public static final char CLEAR_SCREEN ='\u000C';
     private Parser parser;
     private Room currentRoom;
-        
+    private Player player;
+    private Map map;
+    
+    private boolean grateLocked;
+    
     /**
      * Create the game and initialise its internal map.
      */
-    public Game() 
+    public Game(String playerName) 
     {
-        createRooms();
+        player = new Player(playerName);
+        
+        map = new Map();
+        currentRoom = map.getStartRoom();
+        grateLocked = false;
+        
         parser = new Parser();
     }
 
-    /**
-     * Create all the rooms and link their exits together.
-     */
-    private void createRooms()
-    {
-        Room outside, theater, pub, lab, office;
-      
-        // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        theater = new Room("in a lecture theater");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
-        
-        // initialise room exits
-        outside.setExit("east", theater);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
-
-        theater.setExit("west", outside);
-
-        pub.setExit("east", outside);
-
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
-
-        office.setExit("west", lab);
-
-        currentRoom = outside;  // start game outside
-    }
 
     /**
      *  Main play routine.  Loops until end of play.
@@ -78,9 +60,22 @@ public class Game
         {
             Command command = parser.getCommand();
             finished = processCommand(command);
+            
+            if(!player.isAlive())
+            {
+                System.out.println(" \n You have died of lack of water or food!\n");
+                finished = true;
+            }
+            else if(player.isCarrying(ItemTypes.TREASURE))
+            {
+                System.out.println(" \n You have found fabulous treasure!");
+                System.out.println(" and are setup for life!\n");
+                
+                finished = true;               
+            }
         }
         
-        System.out.println("Thank you for playing.  Good bye.");
+        System.out.println(" Thank you for playing.  Good bye.");
     }
 
     /**
@@ -88,11 +83,13 @@ public class Game
      */
     private void printWelcome()
     {
+        System.out.println(CLEAR_SCREEN);
+        System.out.println(" Welcome to the World of Zuul!");
+        System.out.println(" World of Zuul is a new, increaseredibly exiting adventure game.");
+        System.out.println(" Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
-        System.out.println();
+        
+        System.out.println(player);
         System.out.println(currentRoom.getLongDescription());
     }
 
@@ -104,13 +101,14 @@ public class Game
     private boolean processCommand(Command command) 
     {
         boolean wantToQuit = false;
-
+        player.decreaseEnergy(COMMAND_ENERGY);
+        
         CommandWord commandWord = command.getCommandWord();
 
         switch (commandWord) 
         {
             case UNKNOWN:
-                System.out.println("I don't know what you mean...");
+                System.out.println(" I don't know what you mean...");
                 break;
 
             case HELP:
@@ -121,6 +119,22 @@ public class Game
                 goRoom(command);
                 break;
 
+            case LOOK:
+                System.out.println(currentRoom.getLongDescription());
+                break;
+
+            case TAKE:
+                takeItem(command);
+                break;
+                
+            case FILL:
+                fill(command);
+                break;
+               
+            case UNLOCK:
+                unlockGrate();
+                break;
+                
             case QUIT:
                 wantToQuit = quit(command);
                 break;
@@ -137,10 +151,11 @@ public class Game
      */
     private void printHelp() 
     {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println(player);
+        System.out.println(" You are currently " + currentRoom.getShortDescription());
         System.out.println();
-        System.out.println("Your command words are:");
+        System.out.println(" Your command words are:");
+        
         parser.showCommands();
     }
 
@@ -153,7 +168,7 @@ public class Game
         if(!command.hasSecondWord()) 
         {
             // if there is no second word, we don't know where to go...
-            System.out.println("Go where?");
+            System.out.println(" Go where?");
             return;
         }
 
@@ -162,15 +177,144 @@ public class Game
         // Try to leave current room.
         Room nextRoom = currentRoom.getExit(direction);
 
-        if (nextRoom == null) {
-            System.out.println("There is no door!");
+        if (nextRoom == null) 
+        {
+            System.out.println(" There is no exit!");
         }
-        else {
-            currentRoom = nextRoom;
-            System.out.println(currentRoom.getLongDescription());
+        else 
+        {
+            if((currentRoom.getID() == 10) && grateLocked)
+            {
+                System.out.println(" The steel grate is locked!");
+            }
+            else
+            {
+                currentRoom = nextRoom;
+                
+                player.increaseMoves();
+                
+                System.out.println(player);
+                System.out.println(currentRoom.getShortDescription());
+            }
         }
     }
-
+    /**
+     * Allows the player to get items if they are in the room
+     * with a typed input.
+     */
+    public void takeItem(Command command)
+    {
+        ItemTypes item = currentRoom.getItem();
+        String object = command.getSecondWord();
+        String stringItem = item.toString();
+        
+        boolean wantsWater = object.equals("water");
+        
+        if(object == null)
+        {
+            System.out.println("\n What do you want to take?");
+        }
+        else if((item == ItemTypes.NONE) && (!wantsWater))
+        {
+            System.out.println("\n There is nothing here to take!");
+        }
+        else
+        {
+            if(object.equals(stringItem) || wantsWater)
+            {
+                if(!wantsWater)
+                {
+                    currentRoom.removeItem();
+                }
+                
+                if((wantsWater) && (!currentRoom.hasWater()))
+                {
+                    System.out.println("\n There is now water within reach!");
+                }
+                else if ((wantsWater && 
+                         (!player.isCarrying(ItemTypes.BOTTLE))))
+                {
+                    System.out.println("\n You do not have a bottle!");
+                    System.out.println(" You take a drink!");
+                    player.increaseEnergy(15);
+                }
+                
+                else if ((wantsWater && 
+                         (player.isCarrying(ItemTypes.BOTTLE))))
+                {
+                    System.out.println(" You take a drink and feel refreshed!");
+                    player.increaseEnergy(15);
+                }                
+                
+                else
+                {
+                    if(!wantsWater)
+                    {
+                        player.addItem(item);
+                        player.increaseScore(TAKE_SCORE);
+                        System.out.println("\n You have taken the " + item);
+                    }
+                    else
+                    {
+                        System.out.println("\n You have filled the bottle with water!");
+                        
+                    }
+                    
+                    System.out.println(player);
+                    System.out.println(currentRoom.getShortDescription());                    
+                }
+            }
+            else
+            {
+                System.out.println("\n You can't take the " + object);
+            }
+        }
+    }
+    
+    /**
+     * Allows player to fill up their water, if the room contains it.
+     */
+    private void fill(Command command)
+    {
+        if(currentRoom.hasWater())
+        {
+            String object = command.getSecondWord();
+            
+            if(object.equals(ItemTypes.BOTTLE.toString()))
+            {
+                player.addItem(ItemTypes.WATER);
+                player.increaseScore(TAKE_SCORE);
+                
+                System.out.println(player);
+                System.out.println(currentRoom.getShortDescription());                
+            }
+            else
+            {
+                System.out.println(" You do not have a bottle!");
+            }
+        }
+        else
+        {
+            System.out.println(" There is no water here!");
+        }
+    }
+    /**
+     * If the player has possesion of the key item, allows them to
+     * unlock the grate and finish the game.
+     */
+    private void unlockGrate()
+    {
+        if(player.isCarrying(ItemTypes.KEY))
+        {
+            grateLocked = false;
+            System.out.println(" You have unlocked the grate!");
+        }
+        else
+        {
+            System.out.println(" You cannot unlock the grate without keys!");
+        }
+    }
+    
     /** 
      * "Quit" was entered. Check the rest of the command to see
      * whether we really quit the game.
@@ -178,11 +322,13 @@ public class Game
      */
     private boolean quit(Command command) 
     {
-        if(command.hasSecondWord()) {
-            System.out.println("Quit what?");
+        if(command.hasSecondWord()) 
+        {
+            System.out.println(" Quit what?");
             return false;
         }
-        else {
+        else 
+        {
             return true;  // signal that we want to quit
         }
     }
