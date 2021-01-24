@@ -1,0 +1,199 @@
+Around you is a forest. A small stream flows out 
+of the building and down a gully..
+
+ There is an empty bottle of water on the ground you can take.
+
+ Exits: east south north west
+> take bottle
+
+ You have taken the bottle
+
+ ----------------------------------------------
+ | Charlie: | Move 0 | Energy = 98 | Score = 100 |
+ ----------------------------------------------
+
+ You are carrying: bottle
+
+ You are   outside Brick Building
+> go north
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 92 | Score = 100 |
+ ----------------------------------------------
+
+ You are carrying: bottle
+
+ You are  inside Brick Building
+> fill bottle
+ There is no water here!
+> look
+ You are inside Brick Building
+
+ You are  in a well house for a large spring. .
+
+ On the floor there are some keys you can pick up.
+
+ Exits: south
+> take keys
+
+ You have taken the keys
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 86 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  inside Brick Building
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 2 | Energy = 80 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are   outside Brick Building
+> go west
+
+ ----------------------------------------------
+ | Charlie: | Move 3 | Energy = 74 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  A small, abandonded Pub
+> look
+ You are A small, abandonded Pub
+
+ You are  at a pub, which is rundown and old. 
+  glass is shattered all across the floor..
+
+ Exits: east
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 4 | Energy = 66 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are   outside Brick Building
+> go west
+
+ ----------------------------------------------
+ | Charlie: | Move 5 | Energy = 60 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  A small, abandonded Pub
+> look
+ You are A small, abandonded Pub
+
+ You are  at a pub, which is rundown and old. 
+  glass is shattered all across the floor..
+
+ Exits: east
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 6 | Energy = 52 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are   outside Brick Building
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 7 | Energy = 46 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  A modern science lab
+> look
+ You are A modern science lab
+
+ You are  There are various different beakers and science 
+equipment throughout the room..
+
+ There are some apples in a bowl you could take.
+
+ Exits: south north west
+> go west
+
+ ----------------------------------------------
+ | Charlie: | Move 8 | Energy = 38 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  The office to the science lab
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 9 | Energy = 32 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  A modern science lab
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 10 | Energy = 26 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  Beside a large locked grate
+> look
+ You are Beside a large locked grate
+
+ You are  Behind the lab, in the dirt 
+there is a large metal grate 
+it is locked, but if you had keys...
+
+ Exits: east north west down
+> go west
+
+ ----------------------------------------------
+ | Charlie: | Move 11 | Energy = 18 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  An expansive forest, full of life
+> look
+ You are An expansive forest, full of life
+
+ You are  Trees cover the whole area in 
+a cool shade..
+
+ There are an assortment of fruit you could take with you.
+
+ Exits: east
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 12 | Energy = 10 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  Beside a large locked grate
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 13 | Energy = 4 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  Alongside a riverbed
+ 
+ You have died of lack of water or food!
+
+ Thank you for playing.  Good bye.

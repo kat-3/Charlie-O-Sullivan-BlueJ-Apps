@@ -1,0 +1,142 @@
+
+ Welcome to the World of Zuul!
+ World of Zuul is a new, increaseredibly exiting adventure game.
+ Type 'help' if you need help.
+
+
+ ----------------------------------------------
+ | Charlie: | Move 0 | Energy = 100 | Score = 0 |
+ ----------------------------------------------
+
+ You are carrying: nothing!
+ You are  outside Brick Building
+
+ You are  standing at the end of a road before a brick building 
+Around you is a forest. A small stream flows out 
+of the building and down a gully..
+
+ There is an empty bottle of water on the ground you can take.
+
+ Exits: east south north west
+> help
+
+ ----------------------------------------------
+ | Charlie: | Move 0 | Energy = 98 | Score = 0 |
+ ----------------------------------------------
+
+ You are carrying: nothing!
+ You are currently  You are   outside Brick Building
+
+ Your command words are:
+help  take  unlock  go  eat  quit  fill  inventory  look  drink  
+> go north
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 92 | Score = 0 |
+ ----------------------------------------------
+
+ You are carrying: nothing!
+ You are  inside Brick Building
+> take keys
+
+ You have taken the keys
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 90 | Score = 100 |
+ ----------------------------------------------
+
+ You are carrying: keys
+
+ You are  inside Brick Building
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 2 | Energy = 84 | Score = 100 |
+ ----------------------------------------------
+
+ You are carrying: keys
+
+ You are   outside Brick Building
+> take bottle
+
+ You have taken the bottle
+
+ ----------------------------------------------
+ | Charlie: | Move 2 | Energy = 82 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle
+
+ You are   outside Brick Building
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 3 | Energy = 76 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle
+
+ You are  A modern science lab
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 4 | Energy = 70 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle
+
+ You are  Beside a large locked grate
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 5 | Energy = 64 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle
+
+ You are  Alongside a riverbed
+> lookk
+ I don't know what you mean...
+> look
+ You are Alongside a riverbed
+
+ You are  A large river spans across 
+it being seemly endless..
+
+ Exits: west
+> fill bottle
+
+ ----------------------------------------------
+ | Charlie: | Move 5 | Energy = 58 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle, water
+
+ You are  Alongside a riverbed
+> drink
+> go east
+ There is no exit!
+> go west
+
+ ----------------------------------------------
+ | Charlie: | Move 6 | Energy = 50 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle, water
+
+ You are  Beside a large locked grate
+> unlock grate
+ You have unlocked the grate!
+> go down
+
+ ----------------------------------------------
+ | Charlie: | Move 7 | Energy = 44 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: keys, bottle, water
+
+ You are  A dark and musty tunnel, down the grate
+> eat food
+> eat
+> quit
+ Thank you for playing.  Good bye.

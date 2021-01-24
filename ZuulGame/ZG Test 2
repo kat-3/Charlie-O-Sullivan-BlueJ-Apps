@@ -1,0 +1,157 @@
+
+ Welcome to the World of Zuul!
+ World of Zuul is a new, increaseredibly exiting adventure game.
+ Type 'help' if you need help.
+
+
+ ----------------------------------------------
+ | Charlie: | Move 0 | Energy = 100 | Score = 0 |
+ ----------------------------------------------
+
+ You are carrying: nothing!
+ You are  outside Brick Building
+
+ You are  standing at the end of a road before a brick building 
+Around you is a forest. A small stream flows out 
+of the building and down a gully..
+
+ There is an empty bottle of water on the ground you can take.
+
+ Exits: east south north west
+> look
+ You are  outside Brick Building
+
+ You are  standing at the end of a road before a brick building 
+Around you is a forest. A small stream flows out 
+of the building and down a gully..
+
+ There is an empty bottle of water on the ground you can take.
+
+ Exits: east south north west
+> take bottle
+
+ You have taken the bottle
+
+ ----------------------------------------------
+ | Charlie: | Move 0 | Energy = 96 | Score = 100 |
+ ----------------------------------------------
+
+ You are carrying: bottle
+
+ You are   outside Brick Building
+> go north
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 90 | Score = 100 |
+ ----------------------------------------------
+
+ You are carrying: bottle
+
+ You are  inside Brick Building
+> take keys
+
+ You have taken the keys
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 88 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  inside Brick Building
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 2 | Energy = 82 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are   outside Brick Building
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 3 | Energy = 76 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  A modern science lab
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 4 | Energy = 70 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  Beside a large locked grate
+> go east
+
+ ----------------------------------------------
+ | Charlie: | Move 5 | Energy = 64 | Score = 200 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys
+
+ You are  Alongside a riverbed
+> fill bottle
+
+ ----------------------------------------------
+ | Charlie: | Move 5 | Energy = 62 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys, water
+
+ You are  Alongside a riverbed
+> drink water
+> go west
+
+ ----------------------------------------------
+ | Charlie: | Move 6 | Energy = 56 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys, water
+
+ You are  Beside a large locked grate
+> go down
+
+ ----------------------------------------------
+ | Charlie: | Move 7 | Energy = 52 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys, water
+
+ You are  A dark and musty tunnel, down the grate
+> look
+ You are A dark and musty tunnel, down the grate
+
+ You are It is a tight squeeze, but there is some light 
+at the end of the tunnel..
+
+ Exits: up right
+> go right
+
+ ----------------------------------------------
+ | Charlie: | Move 8 | Energy = 46 | Score = 300 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys, water
+
+ You are  A brightly lit, almost glowing area. full of antiques
+> take treasure
+
+ You have taken the treasure
+
+ ----------------------------------------------
+ | Charlie: | Move 8 | Energy = 44 | Score = 400 |
+ ----------------------------------------------
+
+ You are carrying: bottle, keys, water, treasure
+
+ You are  A brightly lit, almost glowing area. full of antiques
+ 
+ You have found fabulous treasure!
+ and are setup for life!
+
+ Thank you for playing.  Good bye.
