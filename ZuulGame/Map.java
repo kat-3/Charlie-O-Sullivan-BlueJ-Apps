@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Map here.
+ * The map creates and links all the various rooms throughout the game.
  *
  * @author Charlie O'Sullivan
  * @version 1.0
@@ -64,7 +64,7 @@ public class Map
         start.setItem(ItemTypes.BOTTLE, "\n There is an empty bottle of water on the ground you can take.");
     }
     /**
-     * Building north of the starting room, contating various items which
+     * Building north of the starting room, contating the keys which
      * need to be picked up.
      */
     private void createBuilding()
@@ -79,7 +79,7 @@ public class Map
     }
 
     /**
-     *
+     * A theatre room east of the starting room.
      */
     private void createTheatre()
     {
@@ -93,7 +93,7 @@ public class Map
     }
 
     /**
-     *
+     * A pub room west of the starting room.
      */
     private void createPub()
     {
@@ -107,7 +107,7 @@ public class Map
     }
 
     /**
-     *
+     * a lab room south of the starting room, which contains food.
      */
     private void createLab()
     {
@@ -123,7 +123,7 @@ public class Map
     }
 
     /**
-     *
+     * an office to the lab, just west of it.
      */
     private void createOffice()
     {
@@ -137,7 +137,8 @@ public class Map
     }
 
     /**
-      *
+      * the grate room which the player needs the keys to go down.
+      * south of the lab.
       */
     private void createGrate()
     {
@@ -152,7 +153,8 @@ public class Map
     }
 
     /**
-      *
+      * A river room, just east of the grate. Allows water bottle to be 
+      * filled.
       */
     private void createRiver()
     {
@@ -165,7 +167,10 @@ public class Map
 
       connectRooms(grate, "east", river);
     }
-
+    
+    /**
+     * A forest room, west of the grate. Has food the player can take.
+     */
     private void createForest()
     {
       forest = new Room(8, "An expansive forest, full of life");
@@ -180,7 +185,8 @@ public class Map
     }
 
     /**
-     * 
+     * A tunnel room which is located under the grate.
+     * Leads to the treasure room.
      */
     private void createTunnel()
     {
@@ -194,7 +200,8 @@ public class Map
     }
     
     /**
-     * 
+     * The final room of the game, which contains the win condition,
+     * the treasure.
      */
     private void createTreasureRoom()
     {
@@ -210,7 +217,9 @@ public class Map
         connectRooms(tunnel, "right", treasureRoom);
     }
     
-    
+    /**
+     * Connects all the rooms together, allowing the rooms to be directional.
+     */
     private void connectRooms(Room room, String direction, Room otherRoom)
     {
         room.setExit(direction, otherRoom);

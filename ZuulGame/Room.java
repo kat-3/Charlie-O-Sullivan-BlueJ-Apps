@@ -48,6 +48,9 @@ public class Room
         water = ItemTypes.NONE;
     }
 
+    /**
+     * Returns the ID of the room.
+     */
     public int getID()
     {
         return id;
@@ -118,16 +121,26 @@ public class Room
         return exits.get(direction);
     }
     
+    /**
+     * returns the name of the room
+     */
     public String getName()
     {
         return name;
     }
     
+    /**
+     * Sets the description of the room, which the player can see
+     * using the LOOK command.
+     */
     public void setDescription(String description)
     {
         this.description = description;
     }
     
+    /**
+     * Returns the description of a room.
+     */
     public String getDescription()
     {
         if(item == ItemTypes.NONE)
@@ -136,27 +149,43 @@ public class Room
             return description + " " + itemDescription;
     }
     
+    /**
+     * Sets an item in the room, which the player can take
+     * using the TAKE command word.
+     */
     public void setItem(ItemTypes item, String itemDescription)
     {
         this.item = item;
         this.itemDescription = itemDescription;
     }
     
+    /**
+     * Returns the item in the room.
+     */
     public ItemTypes getItem()
     {
         return item;
     }
     
+    /**
+     * Sets the item in the room to none.
+     */
     public void removeItem()
     {
         item = ItemTypes.NONE;
     }
     
+    /**
+     * Allows water bottles to be filled in the room.
+     */
     public void setWater()
     {
         water = ItemTypes.WATER;
     }
     
+    /**
+     * States if there is water in the room or not.
+     */
     public boolean hasWater()
     {
         return (water == ItemTypes.WATER);

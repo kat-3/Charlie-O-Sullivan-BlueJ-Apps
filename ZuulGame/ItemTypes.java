@@ -1,6 +1,6 @@
 
 /**
- * 
+ * enumeration class for the making the items a player can have.
  *
  * @author Charlie O'Sullivan
  * @version 1.0

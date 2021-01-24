@@ -55,37 +55,58 @@ public class Player
         alive = true;
     }
 
+    /**
+     * Returns the name of the player.
+     */
     public String getName()
     {
         return this.name;
     }//end method getName
 
+    /**
+     * Sets the name of the player.
+     */
     public void setName(String name)
     {
         this.name = name;
     }//end method setName
 
+    /**
+     * Returns the score of the player.
+     */
     public int getScore()
     {
         return this.score;
     }//end method getScore
 
+    /**
+     * Increases the players score by an integer input.
+     */
     public void increaseScore(int amount)
     {
         score = score + amount;
     }//end method setScore
 
+    /**
+     * Decreases the score by an integer input.
+     */
     public void decreaseScore(int amount)
     {
         score = score - amount;
         if(score < 0)score = 0;
     }//end method setScore
 
+    /**
+     * Returns the amount of moves a player has.
+     */
     public int getMoves()
     {
         return this.moves;
     }
 
+    /**
+     * Increases the amount of moves a player has by integer input.
+     */
     public void increaseMoves()
     {
         this.moves++;
@@ -98,6 +119,9 @@ public class Player
             alive = false;
     }
 
+    /**
+     * Uses the provision item the player has.
+     */
     private void useProvisions(ItemTypes item, int provision)
     {
         if(isCarrying(item))
@@ -115,17 +139,26 @@ public class Player
         
     }
     
+    /**
+     * Returns the amount of energy a player has.
+     */
     public int getEnergy()
     {
         return this.energy;
     }
 
+    /**
+     * Increases the player's energy by an integer input.
+     */
     public void increaseEnergy(int increase)
     {
         this.energy += increase;
         if(energy > MAX_ENERGY)energy = MAX_ENERGY;
     }
 
+    /**
+     * Reduces the player's energy by an integer input.
+     */
     public void decreaseEnergy(int decrease)
     {
         this.energy -= decrease;
@@ -133,32 +166,52 @@ public class Player
             alive = false;
     }
 
+    /**
+     * Returuns if the player is alive or not.
+     */
     public boolean isAlive()
     {
         return this.alive;
     }
 
+    /**
+     * Sets the player's alive state to true.
+     */
     public void setAlive()
     {
         this.alive = true;
     }
 
+    /**
+     * Displays all the items the player has.
+     */
     public ArrayList<ItemTypes> getItems()
     {
         return this.items;
     }
 
+    /**
+     * Adds an item to the players carrying list, if they don't have it
+     * already.
+     */
     public void addItem(ItemTypes item)
     {
         if(!isCarrying(item))
             this.items.add(item);
-    }
+        }
 
+    /**
+     * Removes an item from the player's carrying list.
+     */
     public void removeItem(ItemTypes item)
     {
         this.items.remove(item);
     }    
 
+    /**
+     * Displays the players name, what move they are on, the amount of 
+     * energy they have and their total score.
+     */
     public String toString()
     {
         String 
@@ -171,11 +224,17 @@ public class Player
         return output;
     }
 
+    /**
+     * Displays if the player is carrying a specific item.
+     */
     public boolean isCarrying(ItemTypes item)
     {
         return items.contains(item);
     }
     
+    /**
+     * Displays in a list what items the player is carrying.
+     */
     public String showItems()
     {
         String inventory = "\n You are carrying: ";
