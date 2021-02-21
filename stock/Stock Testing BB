@@ -1,16 +1,31 @@
--4
-Your value is less than zero!
+// Run App
 
- Please enter the order quantity: 
-0
-Your value is less than zero!
+stockApp1.run();
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
 
- Please enter the order quantity: 
+    Enter choice number > 
 1
-Product stock increased by 1
-112: Samsung Galaxy S20 stock level: 10
+ Adding a new product
 
-Delivery of: 1 112: Samsung Galaxy S20 stock level: 10completed sucessfully.
+
+ Please enter the product's ID number: 
+111
+Please enter the product's name: Samsung Galaxy S10
+Product stock increased by 1
+111: Samsung Galaxy S10 stock level: 1
+
+
+111: Samsung Galaxy S10 stock level: 1 has been added to stock. 
 
 ******************************
  Stock Management Application 
@@ -25,21 +40,282 @@ Delivery of: 1 112: Samsung Galaxy S20 stock level: 10completed sucessfully.
     7. Print All Products
 
     Enter choice number > 
-3
- Sell an existing product
+1
+ Adding a new product
 
+
+ Please enter the product's ID number: 
+112
+Please enter the product's name: Samsung Galaxy S20
+Product stock increased by 1
+112: Samsung Galaxy S20 stock level: 1
+
+
+112: Samsung Galaxy S20 stock level: 1 has been added to stock. 
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+1
+ Adding a new product
+
+
+ Please enter the product's ID number: 
+113
+Please enter the product's name: Apple iPhone 11
+Product stock increased by 1
+113: Apple iPhone 11 stock level: 1
+
+
+113: Apple iPhone 11 stock level: 1 has been added to stock. 
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+1
+ Adding a new product
+
+
+ Please enter the product's ID number: 
+114
+Please enter the product's name: Apple iPhone 12
+Product stock increased by 1
+114: Apple iPhone 12 stock level: 1
+
+
+114: Apple iPhone 12 stock level: 1 has been added to stock. 
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+1
+ Adding a new product
+
+
+ Please enter the product's ID number: 
+115
+Please enter the product's name: Motorola G9 Plus
+Product stock increased by 1
+115: Motorola G9 Plus stock level: 1
+
+
+115: Motorola G9 Plus stock level: 1 has been added to stock. 
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+1
+ Adding a new product
+
+// Adding Duplicate ID
+
+ Please enter the product's ID number: 
+111
+Please enter the product's name: Your entry is blank!
+Please enter the product's name: New Product
+Product stock increased by 1
+111: Samsung Galaxy S10 stock level: 2
+
+
+111: New Product stock level: 0 has been added to stock. 
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+1
+ Adding a new product
+
+// Adding Blank Name
+
+ Please enter the product's ID number: 
+116
+Please enter the product's name: Your entry is blank!
+Please enter the product's name: 
+Your entry is blank!
+Please enter the product's name: Xiaomi Mi 11
+Product stock increased by 1
+116: Xiaomi Mi 11 stock level: 1
+
+
+116: Xiaomi Mi 11 stock level: 1 has been added to stock. 
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+5
+Removing a product from the database
+
+
+ Please enter product ID number: 
+113
+Product with ID 113 Has been removed from the system.
+113: Apple iPhone 11 stock level: 1 has been removed sucessfully.
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+5
+Removing a product from the database
+
+
+ Please enter product ID number: 
+203
+Product with id: 203 not found.
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+7
+
+Kat's Stock List
+====================
+
+111: Samsung Galaxy S10 stock level: 2
+112: Samsung Galaxy S20 stock level: 1
+114: Apple iPhone 12 stock level: 1
+115: Motorola G9 Plus stock level: 1
+111: New Product stock level: 0
+116: Xiaomi Mi 11 stock level: 1
+
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+2
+ Delivery for an existing product
+)
 
  Please enter product ID number: 
 112
 
- Please insert the amount to be sold: 
-6
-Selling Product: Order Quantity = 6
-112: Samsung Galaxy S20 stock level: 10
-  6 items sold!
+ Please enter the order quantity: 
+8
+Product stock increased by 8
+112: Samsung Galaxy S20 stock level: 9
 
+Delivery of: 8 112: Samsung Galaxy S20 stock level: 9 completed sucessfully.
 
-6 Amount of 112: Samsung Galaxy S20 stock level: 4 have been sold sucessfully.
+******************************
+ Stock Management Application 
+    App05: by Charlie O'Sullivan
+******************************
+    1. Add Product
+    2. Deliver Product
+    3. Sell Product
+    4. Search for Product
+    5. Remove Product
+    6. Print Low Stock
+    7. Print All Products
+
+    Enter choice number > 
+2
+ Delivery for an existing product
+)
+
+ Please enter product ID number: 
+112
+
+// Delivering a Negative Amount
+
+ Please enter the order quantity: 
+-4
+Your value is less than zero!
+
+ Please enter the order quantity: 
+2
+Product stock increased by 2
+112: Samsung Galaxy S20 stock level: 11
+
+Delivery of: 2 112: Samsung Galaxy S20 stock level: 11 completed sucessfully.
+
 ******************************
  Stock Management Application 
     App05: by Charlie O'Sullivan
@@ -63,11 +339,12 @@ Selling Product: Order Quantity = 6
  Please insert the amount to be sold: 
 10
 Selling Product: Order Quantity = 10
-112: Samsung Galaxy S20 stock level: 4
-  4 items sold!
+112: Samsung Galaxy S20 stock level: 7
+  7 items sold!
 
 
 10 Amount of 112: Samsung Galaxy S20 stock level: 0 have been sold sucessfully.
+
 ******************************
  Stock Management Application 
     App05: by Charlie O'Sullivan
@@ -84,16 +361,13 @@ Selling Product: Order Quantity = 10
 3
  Sell an existing product
 
+// Selling Negative Products
 
  Please enter product ID number: 
 112
 
  Please insert the amount to be sold: 
--2
-Your value is less than zero!
-
- Please insert the amount to be sold: 
-0
+-5
 Your value is less than zero!
 
  Please insert the amount to be sold: 
@@ -104,34 +378,7 @@ Selling Product: Order Quantity = 1
 
 
 1 Amount of 112: Samsung Galaxy S20 stock level: 0 have been sold sucessfully.
-******************************
- Stock Management Application 
-    App05: by Charlie O'Sullivan
-******************************
-    1. Add Product
-    2. Deliver Product
-    3. Sell Product
-    4. Search for Product
-    5. Remove Product
-    6. Print Low Stock
-    7. Print All Products
 
-    Enter choice number > 
-3
- Sell an existing product
-
-
- Please enter product ID number: 
-111
-
- Please insert the amount to be sold: 
-1
-Selling Product: Order Quantity = 1
-111: Samsung Galaxy S10 stock level: 2
-  1 items sold!
-
-
-1 Amount of 111: Samsung Galaxy S10 stock level: 1 have been sold sucessfully.
 ******************************
  Stock Management Application 
     App05: by Charlie O'Sullivan
@@ -147,14 +394,13 @@ Selling Product: Order Quantity = 1
     Enter choice number > 
 4
 
- Please enter the search term: Your entry is blank!
-
  Please enter the search term: Samsung
 Printing products that contain Samsung
 
 Looking for products containing: Samsung
-111: Samsung Galaxy S10 stock level: 1
+111: Samsung Galaxy S10 stock level: 2
 112: Samsung Galaxy S20 stock level: 0
+
 ******************************
  Stock Management Application 
     App05: by Charlie O'Sullivan
@@ -176,7 +422,7 @@ Printing products that have a stock under 2
 
 Printing products that are low on stock 
 
-111: Samsung Galaxy S10 stock level: 1
+111: Samsung Galaxy S10 stock level: 2
 112: Samsung Galaxy S20 stock level: 0
 114: Apple iPhone 12 stock level: 1
 115: Motorola G9 Plus stock level: 1
@@ -184,16 +430,10 @@ Printing products that are low on stock
 116: Xiaomi Mi 11 stock level: 1
 
  There were 6 products with stock less than 2
-******************************
- Stock Management Application 
-    App05: by Charlie O'Sullivan
-******************************
-    1. Add Product
-    2. Deliver Product
-    3. Sell Product
-    4. Search for Product
-    5. Remove Product
-    6. Print Low Stock
-    7. Print All Products
 
-    Enter choice number > 
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+
+ Welcome to the World of Zuul!
+ World of Zuul is a new, increaseredibly exiting adventure game.
+ Type 'help' if you need help.
+
+
+ ----------------------------------------------
+ | Charlie: | Move 0 | Energy = 100 | Score = 0 |
+ ----------------------------------------------
+
+ You are carrying: nothing!
+ You are  outside Brick Building
+
+ You are  standing at the end of a road before a brick building 
+Around you is a forest. A small stream flows out 
+of the building and down a gully..
+
+ There is an empty bottle of water on the ground you can take.
+
+ Exits: east south north west
+> south
+ I don't know what you mean...
+> go south
+
+ ----------------------------------------------
+ | Charlie: | Move 1 | Energy = 92 | Score = 0 |
+ ----------------------------------------------
+
+ You are carrying: nothing!
+ You are  A modern science lab
+> look
+ You are A modern science lab
+
+ You are  There are various different beakers and science 
+equipment throughout the room..
+
+ There are some apples in a bowl you could take.
+
+ Exits: south north west
+> go east
+ There is no exit!
+> Go home
+ I don't know what you mean...
+> 
